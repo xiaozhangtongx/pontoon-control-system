@@ -9,13 +9,20 @@
     <section>
       <Leftmenu />
     </section>
-    <section class="video">2</section>
-    <section class="setting">3</section>
+
+    <section class="video">
+      <router-view />
+    </section>
+    <section class="setting">
+      <Views />
+    </section>
   </div>
 </template>
 
 <script>
 import Leftmenu from '@/layout/Leftmenu'
+import Video from '@/components/Video'
+import Views from '@/components/Views'
 export default {
   name: '',
   data() {
@@ -24,6 +31,8 @@ export default {
   methods: {},
   components: {
     Leftmenu,
+    Video,
+    Views,
   },
 }
 </script>
@@ -36,15 +45,17 @@ div {
   align-items: center;
   section {
     height: 95%;
-    width: 20vw;
+    width: 15vw;
     background-color: #808080;
     border-radius: 10px;
+    box-shadow: darkgrey 1px 1px 30px 1px; //边框阴影
   }
   .video {
-    width: 50vw;
+    width: 52vw;
   }
   .setting {
-    width: 28vw;
+    width: 30vw;
+    background-color: #f0f0f0;
   }
 }
 </style>

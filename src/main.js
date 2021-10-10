@@ -9,10 +9,18 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import Antd from 'ant-design-vue'
-import 'ant-design-vue/dist/antd.css'
-import './assets/less/global.css'
 
+import 'ant-design-vue/dist/antd.css'
 Vue.use(Antd)
+import { Icon } from 'ant-design-vue'
+import './assets/less/global.css'
+import iconFront from './assets/font_2854509_ab9mgq4nad7/iconfont.js'
+const myicon = Icon.createFromIconfontCN({
+  scriptUrl: iconFront,
+})
+//引用
+Vue.component('my-icon', myicon)
+
 Vue.config.productionTip = false
 
 new Vue({

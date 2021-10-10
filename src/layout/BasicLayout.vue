@@ -11,7 +11,9 @@
         <Header />
       </a-layout-header>
       <a-layout-content>
-        <Content />
+        <Content>
+          <router-view></router-view>
+        </Content>
       </a-layout-content>
       <a-layout-footer>
         <Footer />
